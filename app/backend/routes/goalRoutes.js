@@ -5,9 +5,11 @@ const {
   addGoal,
   updateGoal,
   deleteGoal,
+  getGoalById,
 } = require("../controllers/goalController");
 
 router.get("/", getGoals);
+router.get("/:id", getGoalById);
 router.post("/", addGoal);
 router.put("/:id", updateGoal);
 router.delete("/:id", deleteGoal);
